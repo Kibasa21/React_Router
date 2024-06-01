@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <RootLayout />, //isso vai encobrir tudo que tiver como children dele
     errorElement: <ErrorPage />, //isso serve para quando você tenta entrar numa path que não existe
     children: [
-      { path: '', element: <HomePage /> }, //main page, slash nothing
+      { index: true, element: <HomePage /> }, //main page, slash nothing or index: true, diz que vai ser a pagia default //path: ''
       { path: 'products', element: <ProductsPage /> }, //TIRAR A BARRA FAZ COM QUE ISSO VIRE RELATIVE PATH
       { path: 'products/:productId', element: <ProductDetailPage /> } //Esse productId é como se fosse um prop, ele vai receber o nome, ele é dinâmico
     ]

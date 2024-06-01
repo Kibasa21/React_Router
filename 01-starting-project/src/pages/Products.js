@@ -11,7 +11,7 @@ export default function ProductsPage() {
         <>
             <h1>The Products Page</h1>
             <ul>
-                {PRODUCTS.map(({id, title}) => <li key={id}><Link to={"products/"+id}>{title}</Link></li>)}
+                {PRODUCTS.map(({id, title}) => <li key={id}><Link to={id}>{title}</Link></li>)} {/* Se eu apenas por o id, vai ser relativo */}
             </ul>
         </>
     );
